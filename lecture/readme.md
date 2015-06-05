@@ -1,39 +1,40 @@
-* What is the arguments object?
-  * an array like object
+what is jquery
+how to add jquery to the DOM
+cnn.com
+var oScript = document.createElement("script");
+oScript.type = "text\/javascript";
+oScript.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"
+var body = document.getElementsByTagName("body")[0]
+body.appendChild(oScript)
+$ or jQuery
+document ready
+asynchronous/race conditions
+order of loading of scripts
+$(function() {
+  console.log( 'ready!' );
+});
+selectors
+create jquery objects by wrapping a dom element
+when you call a jquery function it operates on all the elements returned by the selector
+each function, $(this)
+children()
+add remove classes, toggle classes
+show/hide, slideup down
+atrr method
+text method
+val method (for select boxes)
+$( ’select' ).val( 'new value' ); select one of the values
 
-* What is an array like object?
+evented programming
+click, keydown
 
-Take this plain object as an example.
-```javascript
-var my_object = {
-    '0': 'zero',
-    '1': 'one',
-    '2': 'two',
-    '3': 'three',
-    '4': 'four',
-    length: 5
-};
+preventdefault (a elements or forms)
+bubbling or event.target
 
+append method
+remove method (hack cnn)
 
-// the this object must have a length method, and []
-Array.prototype.slice = function(begin, end) {
-  var new_array = [];
-  var i = begin;
-  var real_end = end ? end : this.length
-  for (i = 0; i < real_end; i++) {
-    new_array.push(this[i]);
-  }
-  return new_array;
-}
+build a select box that creates subchoices
 
-function test() {
-  return [].slice.call(arguments, 0, 2)
-}
-
-test("a", "b", "c")
-
-```
-
-
-
+steven’s thing
 
